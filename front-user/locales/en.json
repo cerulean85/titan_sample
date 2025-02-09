@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "admin": "Admin",
+    "alarm": "Alarm",
+    "dashboard": "Dashboard",
+    "logistics": "Logistics",
+    "operation": "Production",
+    "remote": "Remote",
+    "report": "Report"
+  },
+
+  "endpoint": {
+    "dashboard/factory": "Factory Status",
+    "dashboard/fin_warehouse": "Goods Warehouse",
+    "logistics/basic_storage": "Storage Status",
+    "logistics/equip_storage": "Equipment Storage Status",
+    "logistics/ship": "Shipping Status",
+    "operation/equip_oper": "Operation Status",
+    "alarm/al_status": "Alarm Status",
+    "alarm/al_history": "Alarm History",
+    "report": "Report",
+    "alarm/alarm_history": "User Management",
+    "admin/ad_alarm": "Alarm Management",
+    "admin/ad_noti": "Notification Management",
+    "admin/ad_auth": "Authorization Management",
+    "admin/ad_etc": "ETC"
+  }
+}

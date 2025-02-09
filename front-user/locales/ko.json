@@ -1,0 +1,37 @@
+{
+  "menu": {
+    "dashboard": "대시보드",      
+    "logistics": "물류현황",
+    "operation": "생산/운영",
+    "alarm": "알람",
+    "report": "리포트"
+  },
+
+  "endpoint": {
+    "db_factory": "공장별 현황",
+    "db_fin_house": "완제품 창고 현황", 
+    "log_basic": "적치 현황", 
+    "log_equip": "설비별 적치 현황", 
+    "log_ship": "출고 현황",
+    "op_equip_oper": "설비 가동 현황",
+    "al_status": "알람 현황",
+    "al_history": "알람 내역", 
+    "rp_report": "리포트",
+    "ad_user_history": "사용자 관리", 
+    "ad_alarm": "알람 관리", 
+    "ad_noti": "공지 관리", 
+    "ad_auth": "권한 관리", 
+    "ad_etc": "기타"
+  },
+
+  "component": {
+    "auto_storage_board": "자동 창고 적치 현황",
+    "pallet_storage_board": "Pallet별 재고 현황",
+    "long_product_storage_board": "완제품 장기 재고 현황",
+    "storage_graph": "적치량 추이",
+
+    "alarm_board": "알람 발생 현황",
+    "equip_alarm_board": "설비별 알람 발생 현황"
+  }
+
+}

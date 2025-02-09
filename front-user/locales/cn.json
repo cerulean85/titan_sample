@@ -1,0 +1,28 @@
+{
+  "menu": {
+    "admin": "管理员",
+    "alarm": "报警",
+    "dashboard": "仪表盘",
+    "logistics": "物流状态",
+    "operation": "生产/运营",
+    "remote": "远程",
+    "report": "报告"
+  },
+
+  "endpoint": {
+    "dashboard/factory": "工厂状态",
+    "dashboard/fin_warehouse": "成品仓库状态",
+    "logistics/basic_storage": "存储状态",
+    "logistics/equip_storage": "按设备存储状态",
+    "logistics/ship": "出库状态",
+    "operation/equip_oper": "设备运行状态",
+    "alarm/al_status": "报警状态",
+    "alarm/al_history": "报警历史",
+    "report": "报告",
+    "alarm/alarm_history": "用户管理",
+    "admin/ad_alarm": "报警管理",
+    "admin/ad_noti": "公告管理",
+    "admin/ad_auth": "权限管理",
+    "admin/ad_etc": "其他"
+  }
+}

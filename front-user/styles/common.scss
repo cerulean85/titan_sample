@@ -1,0 +1,325 @@
+$primary-color: #3498db;
+$header-bg-color: white;//#34495E;
+$header-txt-color: #252525;
+$footer-bg-color: #34495E;
+$footer-txt-color: white;
+$primary-txt-color: #252525;
+$header-height: 67px;
+$footer-height: 28px;
+$header-menu-hover-color: #adb5bd;
+$contents-list-link-color: #1e90ff;
+$main-bg-color: #dee2e6;
+$nav-width: 250px;
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../assets/fonts/NotoSansKR-Regular.ttf') format('truetype'),
+       url('../assets/fonts/NotoSansKR-Medium.ttf') format('truetype'),
+       url('../assets/fonts/NotoSansKR-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Serif KR';
+  src: url('../assets/fonts/NotoSerifKR-Regular.ttf') format('truetype'),
+       url('../assets/fonts/NotoSerifKR-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif, 'Noto Serif KR';
+  font-size: 1.1rem;
+}
+
+body {
+  margin: 0 auto;    /* 좌우 여백을 자동으로 설정 */
+  // overflow: hidden;
+}
+
+nav {
+  min-width: $nav-width;
+  height: calc(100% - $footer-height);
+}
+
+.nav-main {
+  width: 250px;
+  background-color: #2C3E50;
+  color: white;
+  height: calc(100vh - $footer-height);
+
+  .menu-label {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .tab-button {
+
+  }
+
+  .tab-button:hover {
+    opacity: 0.8;
+  }
+}
+
+
+
+a {
+  cursor: pointer;
+}
+
+/* 전체 화면을 덮는 반투명 레이어 */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* 반투명한 검은색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-hidden {
+  visibility: collapse;
+}
+
+.popup-visible {
+  visibility: visible;
+}
+
+.popup-contents {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: 800px;
+  text-align: center;
+}
+
+.popup-anim {
+  height: 240px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.popup-info {
+  width: 100%;
+  height: 450px;
+  text-align: left;
+
+  .contents {
+    width: calc(100% - 20px);
+  }
+  .title {
+    font-weight: bold;
+  }
+}
+
+.common-container {
+  width: 100%;
+  // margin-top: 40px;
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 요소들을 배치 */
+  min-height: calc(100vh - $header-height); /* 페이지가 최소한 화면 크기만큼 높이를 차지하도록 설정 */  
+
+  background-color: cadetblue;
+}
+
+header {
+  height: $header-height;
+  background-color: $header-bg-color;
+  color: $header-txt-color;
+
+  position: fixed;
+  z-Index: 1000;
+  top: 0;
+  left: $nav-width;
+  width: calc(100% - $nav-width);
+  
+  .current-dir {    
+    font-size: 1.2rem;
+    display: block;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+}
+
+section {
+  height: calc(100% - $header-height - $footer-height);
+}
+
+.main-box {
+  width: 100vw;
+  height: calc(100vh - $footer-height);
+}
+
+main {
+  // flex: 1; /* 콘텐츠가 화면의 가용 공간을 모두 차지하도록 설정 */
+  overflow: auto; /* 내용이 길어지면 스크롤이 가능하도록 설정 */
+  user-select: text;
+  width: calc(100% - $nav-width);
+  height: calc(100% - $header-height - $footer-height);
+  padding: 20px 40px 0px 40px;
+  background-color: $main-bg-color;
+  position: absolute;
+  top: $header-height;
+
+  
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+footer {
+  width: 100%;
+  height: $footer-height;
+  text-align: center;
+  background-color: $footer-bg-color;
+  color: $footer-txt-color;
+  font-size: 0.6em;
+  
+
+  .footer-container {
+    display: grid;
+    place-items: center; /* 세로와 가로 중앙 정렬 */
+    height: 100%;
+  }
+}
+
+.al-cur-doghnut-box {
+  background-color: white;
+  width: 240px;
+  height: 260px;
+}
+
+.al-cur-count {
+  width: 100%;
+  height: 30px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  // font-size: 1.2rem;
+  // border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+  text-align: right;
+}
+
+.al-status-page {
+  width: 100%;
+  // background-color: #1e90ff;
+}
+
+.base-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 12px;
+    border-bottom: 1px $main-bg-color solid;
+    text-align: center;
+  }
+}
+
+.al-doughnut-card {
+  @extend .base-card;
+  width: 220px;
+  height: 260px;
+  text-align: center;
+
+  .doughnut-card-chart {
+    width: 100%;
+    height: 100%;
+    // padding-top: 18px;
+  }
+}
+
+.al-metric-card {
+  @extend .base-card;
+  width: 200px;
+  height: 160px;
+
+  .metric {
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-top: 12px;
+    text-align: center;
+  }
+
+}
+
+.al-cur-series-card {
+  @extend .base-card;
+  min-width: 400px;
+  width: calc(100% - 460px);
+  height: 408px;
+
+  .title {
+    text-align: left;
+  }
+
+  .chart {
+    width: 100%;
+    height: 100%;
+    // padding-top: 18px;
+  }
+}
+
+.nav-title-bullet {
+  margin-top: 3px;
+  margin-right: 12px;
+}
+
+.nav-tab-bullet {
+  margin-top: 3px;
+  margin-right: 8px;
+}
+
+.optional-menu {
+  display: block;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.al-status-mixed-graph {
+  width: 100%;
+  min-width: 300px;
+  height: 380px;
+}
+
+.al-cur-equip-series-card {
+  @extend .base-card;
+  min-width: 400px;
+  width: 100%;
+  height: 800px;
+
+  .title {
+    text-align: left;
+  }
+
+  .chart {
+    width: 100%;
+    height: 100%;
+    // padding-top: 18px;
+  }
+}
